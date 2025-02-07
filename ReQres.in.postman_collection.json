@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "e63727c5-548b-44e4-b170-725087dd19db",
+		"name": "ReQres.in",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33934284"
+	},
+	"item": [
+		{
+			"name": "create User",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"XYZ\",\r\n    \"job\": \"Devloper\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log(\"Error\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA256",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json charset=uft-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}}api/users?first_name=Janet",
+					"host": [
+						"{{URL}}}api"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Janet"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

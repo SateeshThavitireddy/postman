@@ -45,7 +45,9 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							""
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -110,18 +112,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}}api/users?first_name=Janet",
+					"raw": "{{URL}}api/users",
 					"host": [
-						"{{URL}}}api"
+						"{{URL}}api"
 					],
 					"path": [
 						"users"
-					],
-					"query": [
-						{
-							"key": "first_name",
-							"value": "Janet"
-						}
 					]
 				}
 			},

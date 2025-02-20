@@ -4,7 +4,7 @@
 		"name": "ReQres.in",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33934284",
-		"_collection_link": "https://thavitireddy.postman.co/workspace/e906ef7f-7180-4ec6-adeb-790fa6fed569/collection/33934284-e63727c5-548b-44e4-b170-725087dd19db?action=share&source=collection_link&creator=33934284"
+		"_collection_link": "https://thavitireddy.postman.co/workspace/Thavitireddy-Workspace~e906ef7f-7180-4ec6-adeb-790fa6fed569/collection/33934284-e63727c5-548b-44e4-b170-725087dd19db?action=share&source=collection_link&creator=33934284"
 	},
 	"item": [
 		{
@@ -99,55 +99,6 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{Base Url}}}login",
-					"host": [
-						"{{Base Url}}}login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "UnSuccessful Login",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"verify the user details\",function(){\r",
-							"    pm.response.to.have.status(201);\r",
-							"    var json = pm.response.json();\r",
-							"\r",
-							"    console.log(\"Response Data\",json);\r",
-							"    \r",
-							"    pm.expect(json.error).to.eql(\"Missing password\");\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"packages": {},
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"peteklaven\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
